@@ -59,6 +59,11 @@ def call_nano_banana(api_key: str, prompt: str, images: List[dict] = None, retri
         return None, "No image returned"
     return None, "Exhausted retries"
 
+@app.get("/healthz")
+def health():
+    return {"status": "ok"}
+
+
 @app.post("/generate")
 def generate_image(api_key: str = Form(...), prompt: str = Form(...)):
     system_prompt = random.choice(PROMPTS["generate_image"])
