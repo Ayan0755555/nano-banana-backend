@@ -30,13 +30,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 (On macOS with Homebrew you can also: `brew install uv`)
 
-## Quick Start
-Clone and sync dependencies:
-```bash
-git clone https://github.com/AIwithhassan/nano-banana-studio.git
-cd nano-banana-studio
-uv sync
-```
+
 
 Run the FastAPI backend:
 ```bash
